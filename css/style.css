@@ -397,46 +397,136 @@ a:hover {
   font-size: 0.65rem;
 }
 
-/* ===== Skills Section ===== */
-.skills-two-column {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  max-width: 800px;
+/* ===== Skills Section (What I do) ===== */
+.skills-what-i-do {
+  position: relative;
 }
 
-.skills-column {
+.skills-main-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-intro {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto 40px;
+}
+
+.skills-panel {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 24px 28px;
+  gap: 32px;
+  align-items: flex-start;
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 40px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.skills-vertical-label {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+  padding: 8px 0;
+  flex-shrink: 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1;
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  min-height: 200px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: all var(--transition);
+  min-height: 120px;
 }
 
-.skill-item {
+.skill-box:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.15);
+}
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.skill-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.skill-icon-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.skill-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skills-meta {
+  margin-top: 28px;
+  padding: 24px 28px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.skills-meta p {
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  padding: 6px 0;
-  border-bottom: 1px solid var(--border);
-  transition: opacity 0.35s ease;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
-.skill-item:last-child {
-  border-bottom: none;
+.skills-meta p:last-child {
+  margin-bottom: 0;
 }
 
-.skill-item.highlight {
-  color: var(--accent);
-  font-weight: 500;
-}
-
-.skill-current {
-  color: var(--accent);
-  font-weight: 500;
-  transition: opacity 0.4s ease;
+.skills-meta strong {
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 /* ===== Contact Form ===== */
@@ -800,6 +890,24 @@ a:hover {
 
   .cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .skills-panel {
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+
+  .skills-vertical-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 0 0 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 8px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 
   .section {
