@@ -43,7 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== Dynamic Skills =====
-const ICON_CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons';
+const ICON_CDN = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons';
 const SKILL_IMG = 'assets/images/skills';
 
 const foundationSkills = [
@@ -179,19 +179,26 @@ function renderSkillBox(skill, basePath = '') {
   box.className = 'skill-box';
   const iconDiv = document.createElement('div');
   iconDiv.className = 'skill-icon';
-  const img = document.createElement('img');
-  if (skill.icon) {
-    const path = iconMap[skill.icon] || 'python/python-original';
-    img.src = `${ICON_CDN}/${path}.svg`;
-    img.alt = skill.name;
-  } else if (skill.img) {
-    img.src = `${basePath}${SKILL_IMG}/${skill.img}.png`;
-    img.alt = skill.name;
-  } else if (skill.text) {
+  if (skill.text) {
     iconDiv.className = 'skill-icon skill-icon-text';
     iconDiv.textContent = skill.text;
-  }
-  if (skill.icon || skill.img) {
+  } else if (skill.icon || skill.img) {
+    const img = document.createElement('img');
+    if (skill.icon) {
+      const path = iconMap[skill.icon] || 'python/python-original';
+      img.src = `${ICON_CDN}/${path}.svg`;
+      img.alt = skill.name;
+    } else {
+      img.src = `${basePath}${SKILL_IMG}/${skill.img}.png`;
+      img.alt = skill.name;
+    }
+    img.onerror = function () {
+      this.style.display = 'none';
+      const fallback = document.createElement('span');
+      fallback.className = 'skill-icon-text';
+      fallback.textContent = skill.name.slice(0, 3).toUpperCase();
+      this.parentNode.appendChild(fallback);
+    };
     iconDiv.appendChild(img);
   }
   const nameSpan = document.createElement('span');
@@ -219,7 +226,7 @@ function updateSkills(set) {
   const container = document.querySelector('.skills-what-i-do');
   const basePath = getBasePath();
 
-  if (!grid || !set) return;
+  if (!grid || !set || !container) return;
 
   container.classList.add('skills-fade');
   setTimeout(() => {
@@ -234,7 +241,9 @@ function updateSkills(set) {
 const roles = Object.keys(skillSets).filter(k => !k.includes('foundation'));
 let currentRole = 0;
 
-if (document.getElementById('skillsGrid')) {
+function initSkills() {
+  const grid = document.getElementById('skillsGrid');
+  if (!grid) return;
   renderFoundation();
   updateSkills(skillSets[roles[0]]);
   setInterval(() => {
@@ -243,8 +252,11 @@ if (document.getElementById('skillsGrid')) {
   }, 3500);
 }
 
-// Card hover parallax (subtle)
-document.querySelectorAll('.card').forEach(card => {
+// Run when DOM is ready
+function init() {
+  initSkills();
+  // Card hover parallax (subtle)
+  document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('mousemove', (e) => {
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
@@ -258,4 +270,11 @@ document.querySelectorAll('.card').forEach(card => {
     const img = card.querySelector('.card-image img');
     if (img) img.style.transform = '';
   });
-});
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}

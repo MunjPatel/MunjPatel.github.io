@@ -407,16 +407,6 @@ a:hover {
   opacity: 0.4;
 }
 
-.skills-tailored {
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 24px;
-}
-
 .skills-foundation {
   margin-bottom: 28px;
   padding: 20px 28px;
