@@ -50,11 +50,11 @@ const foundationSkills = [
   { name: 'Python', icon: 'python' },
   { name: 'SQL', icon: 'postgresql' },
   { name: 'Docker', icon: 'docker' },
-  { name: 'Git', icon: 'git' },
-  { name: 'NumPy', icon: 'numpy' },
-  { name: 'Pandas', icon: 'pandas' },
+  { name: 'R', icon: 'r' },
   { name: 'Bash', icon: 'bash' },
-  { name: 'Excel', img: 'skill_xls' }
+  { name: 'Excel', img: 'skill_xls' },
+  { name: 'SaTScan', img: 'skill_satscan' },
+  { name: 'Scilab', img: 'skill_scilab' }
 ];
 
 const skillSets = {
@@ -223,18 +223,18 @@ function updateSkills(set) {
   const grid = document.getElementById('skillsGrid');
   const title = document.getElementById('skillsTitle');
   const intro = document.getElementById('skillsIntro');
-  const container = document.querySelector('.skills-what-i-do');
+  const rolePanel = document.getElementById('skillsRolePanel');
   const basePath = getBasePath();
 
-  if (!grid || !set || !container) return;
+  if (!grid || !set || !rolePanel) return;
 
-  container.classList.add('skills-fade');
+  rolePanel.classList.add('skills-fade');
   setTimeout(() => {
     title.textContent = set.title;
     intro.textContent = set.intro;
     grid.innerHTML = '';
     set.skills.forEach(skill => grid.appendChild(renderSkillBox(skill, basePath)));
-    container.classList.remove('skills-fade');
+    rolePanel.classList.remove('skills-fade');
   }, 300);
 }
 

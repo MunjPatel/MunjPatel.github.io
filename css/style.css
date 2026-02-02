@@ -400,10 +400,13 @@ a:hover {
 /* ===== Skills Section (What I do) ===== */
 .skills-what-i-do {
   position: relative;
+}
+
+.skills-role-panel {
   transition: opacity 0.3s ease;
 }
 
-.skills-what-i-do.skills-fade {
+.skills-role-panel.skills-fade {
   opacity: 0.4;
 }
 
