@@ -33,7 +33,7 @@ See **[DEPLOYMENT.md](DEPLOYMENT.md)** for step-by-step instructions to host on 
 
 ## Customization
 
+- **Contact form** — Create a free form at [Formspree](https://formspree.io), then replace `YOUR_FORMSPREE_ID` in `index.html` (contact form action URL) with your form ID
 - **Hide Experience** — Remove or comment out the `#experience` section in `index.html` if not needed
-- **Valuation project titles** — Update `projects/valuation-additional.html` if the 6th Drive folder has a specific name
 - **GitHub links** — Edit `projects/*.html` if repo URLs differ
 - **Skills rotation** — Edit the `skills` array in `js/main.js` to change rotating skill sets

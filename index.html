@@ -18,9 +18,10 @@
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#articles">Articles</a></li>
-        <li><a href="mailto:mp7432@nyu.edu">Contact</a></li>
+        <li><a href="#contact">Let's Talk</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span>☰</span>
@@ -30,8 +31,8 @@
 
   <header class="hero">
     <div class="container hero-grid">
-      <div class="hero-photo">
-        <img src="im1.jpeg" alt="Munj Patel">
+      <div class="hero-photo hero-photo-glow">
+        <img src="im2.jpeg" alt="Munj Patel">
       </div>
       <div class="hero-content">
         <span class="hero-badge">MS Financial Engineering · NYU Tandon</span>
@@ -41,14 +42,6 @@
           models to financial markets. I'm excited to bring that lens to <strong>risk and asset management</strong> — 
           building systems that quantify uncertainty, optimize portfolios, and support robust investment decisions.
         </p>
-        <div class="skills-rotating" id="skillsRotating">
-          <span class="skill-current" id="skillCurrent">Portfolio Optimization · Risk Modeling · VaR</span>
-        </div>
-        <div class="hero-links">
-          <a href="mailto:mp7432@nyu.edu">✉ Email</a>
-          <a href="https://www.linkedin.com/in/munj-patel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://medium.com/@patelmunj2011" target="_blank" rel="noopener noreferrer">Medium</a>
-        </div>
       </div>
     </div>
   </header>
@@ -142,6 +135,43 @@
     </div>
   </section>
 
+  <section class="section" id="research">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Background</p>
+        <h2 class="section-title">Research Affiliations</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>SET Conference — Project Lead, Statistical and Computational Analysis</h3>
+            <p class="timeline-loc">Spatio-Temporal Analysis of Road Accident Clusters using SaTScan · Vellore, India</p>
+            <p class="timeline-date">Aug 2022 — Dec 2022</p>
+            <ul class="timeline-list">
+              <li>Led a statistical analysis of spatio-temporal data, using hypothesis testing and SaTScan to detect clusters and validate findings</li>
+              <li>Conducted web scraping, preprocessing, and modeling on large datasets, showcasing advanced statistical and computational skills</li>
+              <li>Presented key findings effectively, demonstrating proficiency in communicating complex data-driven insights</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Expertise</p>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">Relevant to risk, trading, and asset management roles — rotating every 10 seconds.</p>
+      </div>
+      <div class="skills-rotating-box" id="skillsRotating">
+        <span class="skill-current" id="skillCurrent">Portfolio Optimization · Risk Modeling · VaR</span>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="projects">
     <div class="container">
       <div class="section-header">
@@ -157,7 +187,7 @@
               <img src="assets/images/chebychev_pricing_engine.gif" alt="Chebyshev Pricing Engine">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">Risk</span></div>
+              <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">Risk</span><span class="card-tag card-tag-skill">Tail Risk · Non-parametric Pricing</span></div>
               <h3 class="card-title">Chebyshev Pricing & Risk Engine</h3>
               <p class="card-desc">Non-parametric pricing using Chebyshev's Inequality for tail-risk and Black Swan detection.</p>
             </div>
@@ -167,17 +197,17 @@
               <img src="assets/images/drawdown_risk_simulator.gif" alt="Drawdown Risk Simulator">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag">Monte Carlo</span><span class="card-tag">Risk</span></div>
+              <div class="card-tags"><span class="card-tag">Monte Carlo</span><span class="card-tag">Risk</span><span class="card-tag card-tag-skill">Volatility Regimes · Drawdown Probability</span></div>
               <h3 class="card-title">Drawdown Risk Simulator</h3>
               <p class="card-desc">Monte Carlo simulation and volatility regime detection for short-term drawdown probability.</p>
             </div>
           </a>
           <a href="projects/cdo-valuation.html" class="card">
             <div class="card-image">
-              <img src="assets/images/backtest_comparison_realdata.png" alt="CDO Valuation">
+              <img src="assets/images/cdo_tranches.png" alt="CDO Valuation">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span></div>
+              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span><span class="card-tag card-tag-skill">Structured Credit · Tranche Pricing</span></div>
               <h3 class="card-title">CDO Valuation and Risk Modeling</h3>
               <p class="card-desc">Structured credit valuation and risk modeling — NYU Valuation course project.</p>
             </div>
@@ -193,19 +223,19 @@
               <img src="assets/images/alpha_council.gif" alt="AlphaCouncil">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag">LLMs</span><span class="card-tag">Python</span></div>
+              <div class="card-tags"><span class="card-tag">LLMs</span><span class="card-tag">Python</span><span class="card-tag card-tag-skill">Multi-Agent · Consensus Analysis</span></div>
               <h3 class="card-title">AlphaCouncil: Analytical Investment Tool</h3>
               <p class="card-desc">3 specialized agents (Quant, Fundamental, Risk) for consensus-based trade desk insights.</p>
             </div>
           </a>
           <a href="projects/portfolio-analysis.html" class="card">
             <div class="card-image">
-              <img src="assets/images/portfolio_efficient_frontier.png" alt="Portfolio Analysis">
+              <img src="assets/images/backtest_comparison_realdata.png" alt="Portfolio Analysis">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Ridge</span></div>
+              <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Ridge</span><span class="card-tag card-tag-skill">Time Series · Ridge Regression</span></div>
               <h3 class="card-title">Portfolio Analysis & Financial Forecasting</h3>
-              <p class="card-desc">Rolling-window Ridge Regression for portfolio forecasting, 50% reduction in prediction errors.</p>
+              <p class="card-desc">Rolling-window Ridge Regression on ^GSPC (2014–2024) — 50% reduction in prediction errors.</p>
             </div>
           </a>
         </div>
@@ -219,17 +249,17 @@
               <img src="assets/images/basket_option.png" alt="Basket Option Valuation">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span></div>
+              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span><span class="card-tag card-tag-skill">Multi-Asset Options · Risk Premium</span></div>
               <h3 class="card-title">Basket Option Valuation and Risk Premium Modeling</h3>
               <p class="card-desc">Multi-asset option valuation and risk premium analysis — NYU Valuation course.</p>
             </div>
           </a>
           <a href="projects/spx-option-pricing.html" class="card">
             <div class="card-image">
-              <img src="assets/images/backtest_comparison_realdata.png" alt="SPX Option Pricing">
+              <img src="assets/images/spx_options.png" alt="SPX Option Pricing">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span></div>
+              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span><span class="card-tag card-tag-skill">Options Pricing · Implied Volatility</span></div>
               <h3 class="card-title">SPX Empirical Option Pricing Analysis</h3>
               <p class="card-desc">Empirical analysis of S&P 500 index options — Python and Excel implementation.</p>
             </div>
@@ -245,28 +275,28 @@
               <img src="assets/images/merton_credit.png" alt="Merton Debt Model">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span></div>
+              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span><span class="card-tag card-tag-skill">Structural Credit · Capital Structure</span></div>
               <h3 class="card-title">Merton Debt Model and Capital Structure Optimization</h3>
               <p class="card-desc">Structural credit model and optimal capital structure — NYU Valuation course.</p>
             </div>
           </a>
           <a href="projects/yield-curve.html" class="card">
             <div class="card-image">
-              <img src="assets/images/backtest_comparison_realdata.png" alt="Yield Curve Bootstrapping">
+              <img src="assets/images/yield_curve.png" alt="Yield Curve Bootstrapping">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span></div>
+              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span><span class="card-tag card-tag-skill">Bootstrapping · Discount Curves</span></div>
               <h3 class="card-title">US Treasury Yield Curve Bootstrapping</h3>
               <p class="card-desc">Bootstrap methodology for building discount curves from Treasury market data.</p>
             </div>
           </a>
-          <a href="projects/valuation-additional.html" class="card">
+          <a href="projects/valuation-drive.html" class="card">
             <div class="card-image">
               <img src="assets/images/portfolio_efficient_frontier.png" alt="Valuation Project">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span></div>
-              <h3 class="card-title">Additional Valuation & Risk Modeling</h3>
+              <div class="card-tags"><span class="card-tag card-tag-course">Valuation</span><span class="card-tag card-tag-skill">Risk Modeling</span></div>
+              <h3 class="card-title">Valuation & Risk Modeling Project</h3>
               <p class="card-desc">NYU Valuation course project — reports, notebooks, and models on Google Drive.</p>
             </div>
           </a>
@@ -281,7 +311,7 @@
               <img src="assets/images/news_quant.gif" alt="NewsQuant">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag">NLP</span><span class="card-tag">Streamlit</span></div>
+              <div class="card-tags"><span class="card-tag">NLP</span><span class="card-tag">Streamlit</span><span class="card-tag card-tag-skill">Sentiment Analysis · Thematic Research</span></div>
               <h3 class="card-title">NewsQuant: Thematic Market Research</h3>
               <p class="card-desc">NLP pipeline to quantify news sentiment impact on asset prices for thematic research.</p>
             </div>
@@ -297,7 +327,7 @@
               <img src="assets/images/lstm_fin_trends.gif" alt="LSTM FinTrends">
             </div>
             <div class="card-content">
-              <div class="card-tags"><span class="card-tag">LSTM</span><span class="card-tag">Forecasting</span></div>
+              <div class="card-tags"><span class="card-tag">LSTM</span><span class="card-tag">Forecasting</span><span class="card-tag card-tag-skill">Time Series · Deep Learning</span></div>
               <h3 class="card-title">LSTM-FinTrends</h3>
               <p class="card-desc">LSTM-based directional forecasting for stock indices with Flask visualization.</p>
             </div>
@@ -319,7 +349,7 @@
             <img src="assets/images/backtest_comparison_realdata.png" alt="Portfolio Forecasting">
           </div>
           <div class="card-content">
-            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Ridge</span></div>
+            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Ridge</span><span class="card-tag card-tag-skill">Time Series · Ridge Regression</span></div>
             <h3 class="card-title">Portfolio Analysis & Financial Forecasting</h3>
             <p class="card-desc">Rolling-window Ridge Regression for portfolio forecasting, 50% reduction in prediction errors.</p>
           </div>
@@ -329,7 +359,7 @@
             <img src="assets/images/sde_finance.png" alt="SDEs in Finance">
           </div>
           <div class="card-content">
-            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">SDE</span></div>
+            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">SDE</span><span class="card-tag card-tag-skill">Stochastic Calculus · Brownian Motion</span></div>
             <h3 class="card-title">Applications of Stochastic Differential Equations in Financial Modeling</h3>
             <p class="card-desc">Step-by-step approach to SDEs in pricing and risk — mathematical foundations.</p>
           </div>
@@ -339,7 +369,7 @@
             <img src="assets/images/iapla_numerical.png" alt="IAPLA">
           </div>
           <div class="card-content">
-            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Numerical</span></div>
+            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Numerical</span><span class="card-tag card-tag-skill">Differential Equations · Piecewise Linear</span></div>
             <h3 class="card-title">Improved Adaptive Piecewise Linear Approximation (IAPLA)</h3>
             <p class="card-desc">New perspective on solving differential equations for financial applications.</p>
           </div>
@@ -349,7 +379,7 @@
             <img src="assets/images/var_risk.png" alt="VaR">
           </div>
           <div class="card-content">
-            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Risk</span></div>
+            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Risk</span><span class="card-tag card-tag-skill">VaR · Probability · Risk Quantification</span></div>
             <h3 class="card-title">Leveraging Probability to Quantify Financial Risk: A Deep Dive into VaR</h3>
             <p class="card-desc">Value-at-Risk methodologies and probability-based risk quantification.</p>
           </div>
@@ -359,7 +389,7 @@
             <img src="assets/images/portfolio_efficient_frontier.png" alt="Portfolio Optimization">
           </div>
           <div class="card-content">
-            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Portfolio</span></div>
+            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Portfolio</span><span class="card-tag card-tag-skill">Linear Algebra · Mean-Variance</span></div>
             <h3 class="card-title">Optimizing Portfolio Allocation with Linear Algebra</h3>
             <p class="card-desc">Mathematical approach to maximizing returns using linear algebra.</p>
           </div>
@@ -369,7 +399,7 @@
             <img src="assets/images/clustering_pca.png" alt="Data-Driven Finance">
           </div>
           <div class="card-content">
-            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">ML</span></div>
+            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">ML</span><span class="card-tag card-tag-skill">Clustering · PCA · Dimensionality Reduction</span></div>
             <h3 class="card-title">Data-Driven Finance: Clustering and Dimensionality Reduction</h3>
             <p class="card-desc">Clustering algorithms and dimensionality reduction in risk and portfolio management.</p>
           </div>
@@ -379,7 +409,7 @@
             <img src="assets/images/hypothesis_testing.png" alt="Statistical Inference">
           </div>
           <div class="card-content">
-            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Stats</span></div>
+            <div class="card-tags"><span class="card-tag article">Article</span><span class="card-tag">Stats</span><span class="card-tag card-tag-skill">Hypothesis Testing · Statistical Inference</span></div>
             <h3 class="card-title">Harnessing Statistical Inference in Investment Decisions</h3>
             <p class="card-desc">Deep dive into hypothesis testing for quantitative investment decisions.</p>
           </div>
@@ -388,14 +418,33 @@
     </div>
   </section>
 
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Get in Touch</p>
+        <h2 class="section-title">Let's Talk!</h2>
+        <p class="section-sub">Have a question or want to work together? Send me a message.</p>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/xnjzzdry" method="POST">
+        <input type="hidden" name="_subject" value="Portfolio Contact - New Message">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <div class="footer-links contact-links">
+        <a href="mailto:mp7432@nyu.edu">✉ Email</a>
+        <a href="https://www.linkedin.com/in/munj-patel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://medium.com/@patelmunj2011" target="_blank" rel="noopener noreferrer">Medium</a>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-links">
-          <a href="mailto:mp7432@nyu.edu">Email</a>
-          <a href="https://www.linkedin.com/in/munj-patel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://medium.com/@patelmunj2011" target="_blank" rel="noopener noreferrer">Medium</a>
-        </div>
         <p class="footer-copy">© 2025 Munj Patel · New York University</p>
       </div>
     </div>
