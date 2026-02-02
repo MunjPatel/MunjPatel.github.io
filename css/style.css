@@ -265,11 +265,11 @@ a:hover {
 
 /* ===== Sections ===== */
 .section {
-  padding: 100px 0;
+  padding: 56px 0;
 }
 
 .section-header {
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .section-tag {
@@ -360,7 +360,7 @@ a:hover {
 
 /* ===== Category Blocks ===== */
 .category-block {
-  margin-bottom: 56px;
+  margin-bottom: 36px;
 }
 
 .category-block:last-child {
@@ -398,17 +398,39 @@ a:hover {
 }
 
 /* ===== Skills Section ===== */
-.skills-rotating-box {
-  max-width: 640px;
-  padding: 24px 32px;
+.skills-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 800px;
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 28px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  font-size: 1.05rem;
+  border-radius: var(--radius);
+  min-height: 200px;
+}
+
+.skill-item {
   color: var(--text-secondary);
-  min-height: 72px;
-  display: flex;
-  align-items: center;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  transition: opacity 0.35s ease;
+}
+
+.skill-item:last-child {
+  border-bottom: none;
+}
+
+.skill-item.highlight {
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .skill-current {
@@ -572,9 +594,9 @@ a:hover {
 
 /* ===== Footer ===== */
 .footer {
-  padding: 60px 0 40px;
+  padding: 40px 0 32px;
   border-top: 1px solid var(--border);
-  margin-top: 80px;
+  margin-top: 48px;
 }
 
 .footer-inner {
@@ -774,10 +796,6 @@ a:hover {
 
   .hero-content {
     text-align: left;
-  }
-
-  .skills-rotating-box {
-    text-align: center;
   }
 
   .cards-grid {

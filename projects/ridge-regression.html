@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Time Series Forecasting with Rolling Ridge Regression | Munj Patel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="../index.html" class="logo">Munj Patel</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#research">Research</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#articles">Articles</a></li>
+        <li><a href="../index.html#contact">Let's Talk</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <a href="../index.html#articles" class="back-link">← Back to Articles</a>
+
+    <header class="project-hero">
+      <h1>Adaptive Time Series Forecasting with Rolling Ridge Regression</h1>
+      <div class="project-meta">
+        <span>Medium Article · ^GSPC (2014–2024)</span>
+      </div>
+      <div class="project-hero-image">
+        <img src="../assets/images/ridge_timeseries.png" alt="Ridge Regression Time Series Forecasting">
+      </div>
+    </header>
+
+    <div class="project-body">
+      <h2>Overview</h2>
+      <p>
+        Rolling-window Ridge Regression applied to <strong>^GSPC</strong> (S&P 500) using usa_data for 2014–2024. 
+        A simple yet powerful setup for financial time series forecasts — combining deterministic trends with 
+        stochastic residual adjustments.
+      </p>
+
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li><strong>Long-term trends</strong> — Ridge Regression captures general deterministic trends via regularization, linearity, and multicollinearity control</li>
+        <li><strong>Stochastic residuals</strong> — Residual adjustments capture randomness and short-term deviations, enriching predictions beyond pure linear trends</li>
+        <li><strong>Short-term limitations</strong> — As a linear method, Ridge Regression struggles with nonlinear relationships and high volatility in financial series</li>
+        <li><strong>Trade-off</strong> — Ideally suited for broad trends; Neural Networks or Tree-Based Models may perform better for short-term or highly volatile regimes</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>
+        The rolling-window approach with Ridge Regression forms a good fit for modeling deterministic trends over time. 
+        The trade-off between simplicity and sophistication makes it ideal for capturing broad trends in financial data, 
+        while recognizing that more sophisticated methods are required for shorter horizons or volatile conditions.
+      </p>
+
+      <div class="project-ctas">
+        <a href="https://wire.insiderfinance.io/adaptive-time-series-forecasting-with-rolling-ridge-regression-a82f4a718471?sk=b72c8bbeb1c0a3de997d2aa384c16385" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Read Article →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
