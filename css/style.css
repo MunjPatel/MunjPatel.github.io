@@ -400,6 +400,21 @@ a:hover {
 /* ===== Skills Section (What I do) ===== */
 .skills-what-i-do {
   position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.skills-what-i-do.skills-fade {
+  opacity: 0.4;
+}
+
+.skills-tailored {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
 }
 
 .skills-main-title {
@@ -416,7 +431,7 @@ a:hover {
   font-size: 1.05rem;
   line-height: 1.7;
   max-width: 640px;
-  margin: 0 auto 40px;
+  margin: 0 auto 32px;
 }
 
 .skills-panel {
@@ -518,6 +533,12 @@ a:hover {
   color: var(--text-secondary);
   margin-bottom: 10px;
   line-height: 1.6;
+}
+
+.skills-meta p::before {
+  content: '• ';
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .skills-meta p:last-child {
