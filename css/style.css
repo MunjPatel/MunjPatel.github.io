@@ -398,6 +398,16 @@ a:hover {
 }
 
 /* ===== Skills Section (What I do) ===== */
+.skills-tailored {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 24px;
+}
+
 .skills-what-i-do {
   position: relative;
 }
